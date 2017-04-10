@@ -1,0 +1,22 @@
+.instructions{
+    background-color: white;
+    border-top-style: solid;
+    border-top-color: #20e85e;
+    border-top-width: 3px;
+    height: 65vh;
+}
+
+.left{
+    float: left;
+    background-image: url(/assets/image/quiz.jpg);
+    height: 65vh;
+    width: 25em;
+    background-repeat: no-repeat;
+}
+
+.right{
+    float: right;
+    width: 34em;
+    padding-right: 2em;
+    
+}

@@ -1,0 +1,42 @@
+.body{
+
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    height: 3em;
+    background-color: #03A9F4;
+}
+.accLogo{
+    float: left;
+    padding-top: 4px;
+    color: white;
+    font-size: xx-large;
+    padding-left: 27px;
+    /* border-right-style: groove; */
+    /* border-right-width: 2px; */
+    /* border-right-color: #101010; */
+    width: 5em;
+}
+
+.appLogo{
+    float: left;
+    padding-top: 13px;
+    color: white;
+    font-size: large;
+    padding-left: 27px;
+    width: 6em;
+    /* font-style: oblique; */
+    font-family: fantasy;
+}
+
+main{
+        background-color: rgba(230, 221, 221, 0.48);
+    height: 80vh;
+    padding-top: 3em;
+    padding-left: 8em;
+    padding-right: 8em;
+
+}
+
