@@ -9,13 +9,17 @@ import { AppComponent } from './app.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { QuizInstructionsComponent } from './quiz-instructions/quiz-instructions.component';
+import { NavigationServiceService } from './navigation-service.service';
+import { QuestionBankService } from './question-bank.service';
+import { ResultComponent } from './result/result.component';
 
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'start', pathMatch: 'full'},
   { path: 'start', component: QuizInstructionsComponent },
   { path: 'question/:id', component: QuestionsComponent },
-  { path: '**', component: NotFoundComponent }
+  { path: 'result', component: ResultComponent }
+  // { path: '**', component: NotFoundComponent }
   
 ];
   
@@ -24,7 +28,8 @@ const appRoutes: Routes = [
     AppComponent,
     QuestionsComponent,
     NotFoundComponent,
-    QuizInstructionsComponent
+    QuizInstructionsComponent,
+    ResultComponent
   ],
   imports: [  
     BrowserModule,
@@ -32,7 +37,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [NavigationServiceService,QuestionBankService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

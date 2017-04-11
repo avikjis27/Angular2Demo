@@ -1,3 +1,22 @@
-<p>
-  questions works!
-</p>
+<b>Question No.{{questionNumber}}</b>
+&nbsp;&nbsp;&nbsp;{{question.questionDescription}}
+
+<ul class="options">
+  <li *ngFor="let option of question.options; let i = index"><input type="radio" [checked]="i==selectedAns" name="answer" [value]="i" (click)="selectedAnswer(i)">&nbsp;&nbsp;{{option}}</li>
+</ul>
+
+
+<span *ngIf="isPrevAllowed" class="animate-if">
+  <button (click)="goPrev()">Previous</button> 
+</span>
+
+<span *ngIf="isNextAllowed" class="animate-if">
+  <button (click)="goNext()">Next</button> 
+</span>
+
+<span *ngIf="canSubmit" class="animate-if">
+  <button (click)="submit()">Submit</button> 
+</span>
+
+
+<button (click)="doFlag()">Flag</button>
