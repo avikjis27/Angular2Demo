@@ -18,6 +18,7 @@ export class QuestionBankService {
       question.options.push("Third Option for question " + index);
       question.options.push("Forth Option for question " + index);
       question.correctOption = 3;
+      question.correctAnswerDescription = question.options[question.correctOption-1];
 
       this.questions.push(question);
 
@@ -38,10 +39,11 @@ export class QuestionBankService {
     return question;
   }
 
-  updateAnswer(qNo:any, ans:Number){
+  updateAnswer(qNo:any, ans:number){
     this.questions.forEach((item, index) => {
       if ((qNo-1) === index) {
         item.selectedAnswer = ans ;
+        item.selectedAnswerDescription = item.options[ans-1];
       }
     });
   }

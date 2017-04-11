@@ -58,7 +58,7 @@ export class QuestionsComponent implements OnInit {
     alert('Flagged');
   }
 
-  selectedAnswer(ans:Number){
+  selectedAnswer(ans:number){
     this.questService.updateAnswer(this.questionNumber,ans);
   }
   

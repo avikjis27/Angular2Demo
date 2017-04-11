@@ -1,1 +1,16 @@
-
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Question</th>
+      <th>Your Answer</th>
+      <th>Correct Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let question of questions; let i = index">
+      <td class="mdl-data-table__cell--non-numeric">{{question.questionDescription}}</td>
+      <td><span [ngClass]="{'error':(question.correctOption != question.selectedAnswer )}">{{question.selectedAnswerDescription}}</span></td>
+      <td>{{question.correctAnswerDescription}}</td>
+    </tr>
+  </tbody>
+</table>

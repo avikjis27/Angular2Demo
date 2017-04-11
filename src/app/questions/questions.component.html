@@ -4,19 +4,19 @@
 <ul class="options">
   <li *ngFor="let option of question.options; let i = index"><input type="radio" [checked]="i==selectedAns" name="answer" [value]="i" (click)="selectedAnswer(i)">&nbsp;&nbsp;{{option}}</li>
 </ul>
-
-
+<div class="control">
 <span *ngIf="isPrevAllowed" class="animate-if">
-  <button (click)="goPrev()">Previous</button> 
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent centre-button" (click)="goPrev()">Previous</button> 
 </span>
 
 <span *ngIf="isNextAllowed" class="animate-if">
-  <button (click)="goNext()">Next</button> 
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent centre-button" (click)="goNext()">Next</button> 
 </span>
 
 <span *ngIf="canSubmit" class="animate-if">
-  <button (click)="submit()">Submit</button> 
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent centre-button" (click)="submit()">Submit</button> 
 </span>
 
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent centre-button" (click)="doFlag()">Flag</button>
+</div>
 
-<button (click)="doFlag()">Flag</button>

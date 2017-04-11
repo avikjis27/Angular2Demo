@@ -1,3 +1,10 @@
 .options{
     list-style-type: none;
 }
+.control{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 4em;
+    padding-left: 7em;
+}
